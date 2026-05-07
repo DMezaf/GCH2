@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing para Captura de Leads | GCH</title>
+  <meta name="description" content="Landing para campañas de marketing digital con captura de leads y seguimiento de UTMs para General Certifications House.">
+  <link rel="stylesheet" href="assets/shared.css">
+  <style>
+    :root{
+      --ink:#10233f;
+      --hero:#0f2745;
+      --hero-soft:#173d69;
+      --paper:#ffffff;
+      --mist:#edf4fb;
+      --line:#cfdbef;
+      --accent:#ff9a7a;
+      --accent-deep:#ff7c54;
+      --success:#0d7a52;
+    }
+    body{
+      background:
+        radial-gradient(circle at top right, rgba(255,154,122,.18), transparent 22%),
+        linear-gradient(180deg, #f6f9fd 0%, #eef4fb 100%);
+    }
+    main{padding:0 0 70px}
+    .campaign-hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(135deg, rgba(9,25,48,.96), rgba(19,61,105,.94)),
+        url("assets/img/hero_contacto.png") center/cover no-repeat;
+      color:#fff;
+      padding:72px 0 54px;
+    }
+    .campaign-hero::after{
+      content:"";
+      position:absolute;
+      inset:auto -10% -70px auto;
+      width:360px;
+      height:360px;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(255,154,122,.35), transparent 68%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap:24px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    .campaign-hero h1{
+      margin:16px 0 14px;
+      font-size:clamp(2.2rem, 4vw, 4.35rem);
+      line-height:1.02;
+      max-width:11ch;
+      color:#fff;
+    }
+    .campaign-hero p{
+      margin:0;
+      max-width:660px;
+      font-size:1.08rem;
+      color:rgba(255,255,255,.88);
+    }
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-top:24px;
+    }
+    .hero-points article{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(6px);
+    }
+    .hero-points strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1.45rem;
+      color:#fff;
+    }
+    .hero-panel{
+      background:rgba(255,255,255,.96);
+      color:var(--ink);
+      border:1px solid rgba(255,255,255,.3);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 24px 60px rgba(7,20,39,.22);
+    }
+    .hero-panel h2{
+      margin:0 0 8px;
+      color:#172C51;
+      font-size:1.55rem;
+    }
+    .hero-panel p{
+      color:#4c5f7a;
+      font-size:.98rem;
+    }
+    .hero-panel ul{
+      margin:18px 0 0;
+      padding-left:18px;
+      color:#31455f;
+    }
+    .section-shell{
+      margin-top:30px;
+    }
+    .kpi-strip{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:14px;
+      margin-top:-26px;
+      position:relative;
+      z-index:2;
+    }
+    .kpi-card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 14px 30px rgba(23,44,81,.08);
+    }
+    .kpi-card span{
+      display:block;
+      color:#60738f;
+      font-size:.9rem;
+    }
+    .kpi-card strong{
+      display:block;
+      margin-top:6px;
+      font-size:1.5rem;
+      color:#172C51;
+    }
+    .content-grid{
+      display:grid;
+      grid-template-columns:minmax(0,.92fr) minmax(320px,.88fr);
+      gap:22px;
+      align-items:start;
+    }
+    .feature-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:22px;
+    }
+    .feature-card{
+      background:#fff;
+      border:1px solid #dbe5f4;
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 12px 28px rgba(23,44,81,.06);
+    }
+    .feature-card h3{
+      margin:0 0 8px;
+      color:#172C51;
+      font-size:1.05rem;
+    }
+    .feature-card p{
+      margin:0;
+      color:#49607c;
+    }
+    .form-wrap{
+      background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
+      border:1px solid #cfdbef;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 22px 44px rgba(23,44,81,.08);
+      position:sticky;
+      top:116px;
+    }
+    .form-wrap h2{
+      margin:0 0 8px;
+      color:#172C51;
+      font-size:1.65rem;
+      line-height:1.1;
+    }
+    .form-wrap .intro{
+      margin:0 0 18px;
+      color:#59708d;
+    }
+    .lead-form{
+      display:grid;
+      gap:14px;
+    }
+    .lead-form .field-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .lead-form label{
+      display:block;
+      margin-bottom:6px;
+      color:#233651;
+      font-weight:700;
+    }
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea{
+      width:100%;
+      border:1px solid #d2deef;
+      border-radius:14px;
+      padding:12px 14px;
+      background:#fff;
+      color:#1d2630;
+      font:inherit;
+    }
+    .lead-form textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+    .lead-form input:focus,
+    .lead-form select:focus,
+    .lead-form textarea:focus{
+      outline:none;
+      border-color:#0F4C81;
+      box-shadow:0 0 0 3px rgba(15,76,129,.15);
+    }
+    .meta-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+    .meta-chip{
+      border:1px dashed #bfd0e8;
+      border-radius:16px;
+      padding:12px;
+      background:#f7fbff;
+    }
+    .meta-chip strong{
+      display:block;
+      color:#172C51;
+      margin-bottom:4px;
+      font-size:.92rem;
+    }
+    .meta-chip span{
+      display:block;
+      color:#5f728f;
+      font-size:.92rem;
+      word-break:break-word;
+    }
+    .consent{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:#4d607b;
+      font-size:.94rem;
+    }
+    .consent input{
+      width:18px;
+      height:18px;
+      margin-top:2px;
+    }
+    .submit-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .status{
+      min-height:24px;
+      font-weight:700;
+      font-size:.95rem;
+    }
+    .status[data-state="success"]{color:var(--success)}
+    .status[data-state="error"]{color:#ab2337}
+    .status[data-state="loading"]{color:#0F4C81}
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .process-card{
+      background:#fff;
+      border:1px solid #d9e3f2;
+      border-radius:18px;
+      padding:18px;
+    }
+    .process-card strong{
+      display:inline-flex;
+      width:36px;
+      height:36px;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      background:#172C51;
+      color:#fff;
+      margin-bottom:12px;
+    }
+    .note{
+      margin-top:18px;
+      padding:16px 18px;
+      border-left:4px solid var(--accent);
+      border-radius:0 14px 14px 0;
+      background:#fff7f3;
+      color:#614738;
+    }
+    @media (max-width: 1080px){
+      .hero-grid,
+      .content-grid{grid-template-columns:1fr}
+      .form-wrap{position:static}
+      .hero-points,
+      .kpi-strip,
+      .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width: 720px){
+      .campaign-hero{padding:54px 0 38px}
+      .hero-points,
+      .feature-list,
+      .lead-form .field-grid,
+      .meta-grid,
+      .kpi-strip,
+      .process-grid{grid-template-columns:1fr}
+      .hero-panel,
+      .form-wrap{padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <div data-include="partials/header.html"></div>
+
+  <main>
+    <section class="campaign-hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Marketing Digital + Captura de Leads</div>
+          <h1>Convierte campañas en oportunidades reales.</h1>
+          <p>Esta landing está lista para recibir prospectos desde Google Ads, Meta Ads, email marketing o tráfico orgánico, y guardar automáticamente los datos del lead junto con la trazabilidad de campaña.</p>
+
+          <div class="hero-points">
+            <article>
+              <strong>UTMs</strong>
+              <span>Guarda `source`, `medium`, `campaign`, `term` y `content`.</span>
+            </article>
+            <article>
+              <strong>API</strong>
+              <span>Endpoint simple para registrar leads desde la web o desde otras fuentes.</span>
+            </article>
+            <article>
+              <strong>Seguimiento</strong>
+              <span>Conserva página de aterrizaje, referer, fecha y canal declarado.</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <h2>Qué queda listo en esta primera versión</h2>
+          <p>Una base funcional para que tu equipo empiece a captar leads y después la conectemos con CRM, email o dashboards.</p>
+          <ul>
+            <li>Landing enfocada en conversión.</li>
+            <li>Formulario validado con campos comerciales.</li>
+            <li>Captura automática de parámetros UTM.</li>
+            <li>API local con almacenamiento en JSON y CSV.</li>
+            <li>Endpoint reusable para futuras campañas.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-shell">
+      <div class="container">
+        <div class="kpi-strip">
+          <article class="kpi-card">
+            <span>Canales compatibles</span>
+            <strong>Google, Meta, Email</strong>
+          </article>
+          <article class="kpi-card">
+            <span>Formato de salida</span>
+            <strong>JSON + CSV</strong>
+          </article>
+          <article class="kpi-card">
+            <span>Campos de atribución</span>
+            <strong>8+ metadatos</strong>
+          </article>
+          <article class="kpi-card">
+            <span>Siguiente paso natural</span>
+            <strong>CRM o automatización</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container content-grid">
+        <div>
+          <p class="section-title">Qué información captura esta landing</p>
+          <p class="hint">Además de los datos del prospecto, el sistema guarda el contexto de adquisición para saber de qué campaña llegó cada lead.</p>
+
+          <div class="feature-list">
+            <article class="feature-card">
+              <h3>Datos del lead</h3>
+              <p>Nombre, empresa, cargo, teléfono, email, servicio de interés y necesidad comercial.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Datos de campaña</h3>
+              <p>UTM source, medium, campaign, term y content para análisis de rendimiento por anuncio.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Datos técnicos</h3>
+              <p>Landing page, referer, fecha de registro y tipo de dispositivo aproximado vía navegador.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Datos operativos</h3>
+              <p>Origen declarado del lead y estatus inicial para facilitar seguimiento comercial.</p>
+            </article>
+          </div>
+
+          <p class="section-title" style="margin-top:34px;">Flujo recomendado</p>
+          <div class="process-grid">
+            <article class="process-card">
+              <strong>1</strong>
+              <h3>Campaña activa</h3>
+              <p>Publicas anuncios con enlaces etiquetados con UTMs hacia esta landing.</p>
+            </article>
+            <article class="process-card">
+              <strong>2</strong>
+              <h3>Captura del lead</h3>
+              <p>El prospecto llena el formulario y la API guarda datos comerciales y de atribución.</p>
+            </article>
+            <article class="process-card">
+              <strong>3</strong>
+              <h3>Seguimiento comercial</h3>
+              <p>Tu equipo exporta el CSV o consulta el JSON para contactar y medir resultados.</p>
+            </article>
+          </div>
+
+          <div class="note">
+            Esta solución es ideal como MVP. Si quieres, en el siguiente paso la convertimos en una versión con base de datos, panel de administración y conexión a WhatsApp, HubSpot, Zoho o Meta Leads.
+          </div>
+        </div>
+
+        <aside class="form-wrap">
+          <h2>Solicita información</h2>
+          <p class="intro">Completa el formulario para registrar un lead de campaña y conservar su fuente de adquisición.</p>
+
+          <form class="lead-form" id="leadForm" novalidate>
+            <div class="field-grid">
+              <div>
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" required type="text">
+              </div>
+              <div>
+                <label for="empresa">Empresa</label>
+                <input id="empresa" name="empresa" type="text">
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="cargo">Cargo</label>
+                <input id="cargo" name="cargo" type="text">
+              </div>
+              <div>
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel">
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" required type="email">
+              </div>
+              <div>
+                <label for="servicio">Interés principal</label>
+                <select id="servicio" name="servicio">
+                  <option value="">Selecciona una opción</option>
+                  <option>Certificaciones</option>
+                  <option>Auditorías</option>
+                  <option>Cursos</option>
+                  <option>Información general</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="origen">Canal declarado</label>
+                <select id="origen" name="origen">
+                  <option value="">Selecciona una opción</option>
+                  <option>Google Ads</option>
+                  <option>Facebook Ads</option>
+                  <option>Instagram Ads</option>
+                  <option>LinkedIn Ads</option>
+                  <option>Email marketing</option>
+                  <option>Orgánico</option>
+                  <option>Referencia</option>
+                </select>
+              </div>
+              <div>
+                <label for="presupuesto">Presupuesto estimado</label>
+                <select id="presupuesto" name="presupuesto">
+                  <option value="">Selecciona una opción</option>
+                  <option>Menos de $10,000 MXN</option>
+                  <option>$10,000 - $25,000 MXN</option>
+                  <option>$25,000 - $50,000 MXN</option>
+                  <option>Más de $50,000 MXN</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="mensaje">Necesidad o comentario</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué campaña, servicio o necesidad comercial quieres atender."></textarea>
+            </div>
+
+            <div class="meta-grid" id="utmPreview">
+              <div class="meta-chip">
+                <strong>UTM Source</strong>
+                <span data-meta="utm_source">Sin valor</span>
+              </div>
+              <div class="meta-chip">
+                <strong>UTM Campaign</strong>
+                <span data-meta="utm_campaign">Sin valor</span>
+              </div>
+              <div class="meta-chip">
+                <strong>UTM Medium</strong>
+                <span data-meta="utm_medium">Sin valor</span>
+              </div>
+              <div class="meta-chip">
+                <strong>Referrer</strong>
+                <span data-meta="referrer">Directo</span>
+              </div>
+            </div>
+
+            <label class="consent">
+              <input id="consentimiento" name="consentimiento" required type="checkbox">
+              <span>Acepto el tratamiento de mis datos para fines de contacto comercial y seguimiento de la solicitud.</span>
+            </label>
+
+            <div class="submit-row">
+              <button class="btn btn-primary" type="submit">Enviar lead</button>
+              <div class="status" id="formStatus" aria-live="polite"></div>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="assets/include-partials.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById('leadForm');
+      const status = document.getElementById('formStatus');
+      const params = new URLSearchParams(window.location.search);
+      const tracking = {
+        utm_source: params.get('utm_source') || '',
+        utm_medium: params.get('utm_medium') || '',
+        utm_campaign: params.get('utm_campaign') || '',
+        utm_term: params.get('utm_term') || '',
+        utm_content: params.get('utm_content') || '',
+        gclid: params.get('gclid') || '',
+        fbclid: params.get('fbclid') || '',
+        landing_page: window.location.href,
+        referrer: document.referrer || 'Directo',
+        user_agent: navigator.userAgent
+      };
+
+      Object.keys(tracking).forEach(function (key) {
+        const target = document.querySelector('[data-meta="' + key + '"]');
+        if (target) {
+          target.textContent = tracking[key] || 'Sin valor';
+        }
+      });
+
+      function setStatus(message, state) {
+        status.textContent = message;
+        status.dataset.state = state || '';
+      }
+
+      function serializeForm(formElement) {
+        const formData = new FormData(formElement);
+        const payload = {};
+        formData.forEach(function (value, key) {
+          payload[key] = typeof value === 'string' ? value.trim() : value;
+        });
+        return payload;
+      }
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        if (!form.reportValidity()) {
+          setStatus('Revisa los campos obligatorios antes de enviar.', 'error');
+          return;
+        }
+
+        const payload = Object.assign({
+          estado: 'nuevo'
+        }, serializeForm(form), tracking);
+
+        setStatus('Enviando lead...', 'loading');
+
+        try {
+          const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(result.error || 'No se pudo guardar el lead.');
+          }
+
+          form.reset();
+          setStatus('Lead registrado correctamente. Folio: ' + result.lead.id, 'success');
+        } catch (error) {
+          setStatus(error.message || 'Ocurrió un error al guardar el lead.', 'error');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

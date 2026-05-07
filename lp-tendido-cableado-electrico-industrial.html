@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="es-MX" data-concept="servicios-especializados">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Tendido y Cableado Eléctrico Industrial | BT · MT · AT | VMS Energy</title>
+  <meta name="description" content="Servicio EPC de tendido y cableado eléctrico industrial en baja, media y alta tensión: diseño de rutas, canalización, terminaciones, pruebas megger y Hi-Pot. NOM-001-SEDE · IEC 60502 · CFE."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://vmsenergy.com/lp-tendido-cableado-electrico-industrial.html"/>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="servicios-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── TENDIDO Y CABLEADO ELÉCTRICO — page CSS ──────────────── */
+    :root {
+      --serv-hero-img: url('assets/img/hero_que_hacemos_VMS_Energy.png');
+      --serv-hero-before-display: block;
+      --serv-hero-gradient-bg: transparent;
+    }
+    .hero-eyebrow{display:inline-flex;gap:7px;padding:.28rem .72rem;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:.8rem;margin:0 0 16px}
+    /* Alcance cards (6 servicios) */
+    .alcance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .alc-card{background:#fff;border:1px solid rgba(23,44,81,.13);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.05);border-top:4px solid var(--concept-primary)}
+    .alc-card__icon{font-size:1.6rem;margin:0 0 10px;display:block}
+    .alc-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .alc-card__desc{font-size:.87rem;color:#4b5563;margin:0;line-height:1.55}
+    /* Tensión tabs */
+    .tension-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(23,44,81,.15);border-radius:16px;overflow:hidden;margin-top:20px}
+    .tension-tab{padding:28px 22px;background:#fff}
+    .tension-tab:not(:last-child){border-right:1px solid rgba(23,44,81,.12)}
+    .tension-tab__badge{display:inline-block;font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;padding:.22rem .7rem;border-radius:999px;margin:0 0 12px;background:var(--concept-primary);color:#fff}
+    .tension-tab__title{font-size:1.05rem;font-weight:800;color:#0f172a;margin:0 0 10px}
+    .tension-tab__list{font-size:.85rem;color:#374151;line-height:1.7;margin:0;padding-left:16px}
+    .tension-tab__list li{margin-bottom:2px}
+    .tension-tab__norm{margin:12px 0 0;font-size:.77rem;color:var(--concept-primary);font-weight:700;background:rgba(15,76,129,.07);padding:.3rem .7rem;border-radius:6px;display:inline-block}
+    /* Pruebas grid */
+    .prueba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .prueba-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:20px 16px}
+    .prueba-card__num{font-size:.72rem;font-weight:900;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+    .prueba-card__title{font-size:.95rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .prueba-card__desc{font-size:.84rem;color:#4b5563;margin:0;line-height:1.55}
+    /* Entregables */
+    .entregables-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .ent-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:14px;text-align:center}
+    .ent-card__icon{font-size:1.4rem;margin-bottom:8px}
+    .ent-card__title{font-size:.88rem;font-weight:800;color:#0f172a;margin:0}
+    /* Responsive */
+    @media(max-width:1100px){.alcance-grid{grid-template-columns:repeat(2,1fr)};.prueba-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:900px){.tension-tabs{grid-template-columns:1fr};.tension-tab:not(:last-child){border-right:0;border-bottom:1px solid rgba(23,44,81,.12)}}
+    @media(max-width:700px){.alcance-grid{grid-template-columns:1fr};.prueba-grid{grid-template-columns:1fr};.entregables-grid{grid-template-columns:1fr 1fr}}
+  
+    /* VMShop cable callout */
+    .vmshop-cable-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .vmshop-cable-chip{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #d4e3f5;border-radius:12px;padding:12px 14px;text-decoration:none;color:#0f2747;font-size:13.5px;font-weight:600;transition:box-shadow .18s,border-color .18s}
+    .vmshop-cable-chip:hover{border-color:var(--concept-primary);box-shadow:0 4px 14px rgba(15,76,129,.13)}
+    .vmshop-cable-chip__dot{width:8px;height:8px;border-radius:50%;background:var(--concept-primary);flex-shrink:0}
+    @media(max-width:640px){.vmshop-cable-grid{grid-template-columns:1fr 1fr}}
+    .vmshop-callout{background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%);border:1px solid rgba(15,76,129,.18);border-radius:18px;padding:24px 28px;display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap}
+    .vmshop-callout__icon{width:52px;height:52px;border-radius:12px;background:var(--concept-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px}
+    .vmshop-callout__icon svg{width:28px;height:28px;fill:#fff}
+    .vmshop-callout__tag{display:inline-flex;background:#e7f0ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.18rem .65rem;font-size:11px;font-weight:700;letter-spacing:.03em;margin-bottom:6px}
+    .vmshop-callout__title{margin:0 0 4px;font-size:17px;color:#0f2747}
+    .vmshop-callout__sub{margin:0;font-size:13.5px;color:#35516f;line-height:1.45}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Service",
+     "name":"Tendido y Cableado Eléctrico Industrial",
+     "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com"},
+     "description":"Servicio EPC de tendido y cableado eléctrico industrial en baja, media y alta tensión: diseño de rutas, canalización, terminaciones, pruebas megger y Hi-Pot. NOM-001-SEDE, IEC 60502.",
+     "areaServed":{"@type":"Country","name":"México"},
+     "serviceType":"Electrical Cable Installation EPC"},
+    {"@type":"FAQPage",
+     "mainEntity":[
+       {"@type":"Question","name":"¿Cuál es la diferencia entre el suministro de cable y el servicio de cableado?",
+        "acceptedAnswer":{"@type":"Answer","text":"El suministro de cable es la procura del material (conductor, aislamiento, cubierta) conforme a especificación técnica. El servicio de cableado EPC incluye adicionalmente el diseño de rutas, planos de canalización, fabricación e instalación de bandejas y conduit, tendido del cable respetando radios de curvatura y temperaturas de instalación, terminaciones certificadas y pruebas eléctricas documentadas (megger, Hi-Pot, continuidad). VMS Energy presta ambos servicios de forma integrada."}},
+       {"@type":"Question","name":"¿Qué normas aplican al cableado eléctrico industrial en México?",
+        "acceptedAnswer":{"@type":"Answer","text":"Las normas principales son: NOM-001-SEDE-2012 (instalaciones eléctricas en general), NMX-J-010-ANCE (conductores y cables BT), NMX-J-098-ANCE (cables de potencia MT), IEC 60502-1 (cables BT hasta 1kV), IEC 60502-2 (cables MT 1-30kV), IEC 60502-4 (cables AT). Para proyectos CFE aplican adicionalmente la especificación CFE L0000-41 y los criterios de diseño de la empresa. En instalaciones con riesgo de incendio también aplica NOM-002-STPS para sellado cortafuego de ductos."}},
+       {"@type":"Question","name":"¿Qué pruebas eléctricas realizan después de instalar el cable?",
+        "acceptedAnswer":{"@type":"Answer","text":"Las pruebas estándar incluyen: resistencia de aislamiento (megger a 500V para BT, 1kV–5kV para MT, 10kV para AT), continuidad del conductor y verificación de resistencia (micro-ohm), continuidad de pantalla o blindaje, y prueba de rigidez dieléctrica Hi-Pot (DC a 0.6Un durante 15 min para MT/AT, o VLF a 0.1Hz para cables de AT sin daño capacitivo). Cada prueba se entrega en protocolo firmado con valores medidos y comparativa contra límites normativos."}},
+       {"@type":"Question","name":"¿Cuál es el radio de curvatura mínimo para cables de media tensión?",
+        "acceptedAnswer":{"@type":"Answer","text":"Según IEC 60502-2 y los fabricantes, el radio de curvatura mínimo para cables MT unipolares con pantalla metálica es generalmente de 12 a 15 veces el diámetro exterior del cable durante la instalación en frío, y 8 a 10 veces en servicio estático. Para cables triplex o con armadura el factor puede aumentar. Siempre verificamos el valor específico del fabricante del cable suministrado antes del tendido."}},
+       {"@type":"Question","name":"¿Pueden instalar cableado en zonas clasificadas (ATEX/NEC)?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. En áreas clasificadas instalamos conduit rígido con selladores cortafuego (NEC Art. 501), glands certificados Ex-e o Ex-d para entradas a tableros certificados, y cables con cubierta adecuada al ambiente (resistente a hidrocarburos, FR-XLPE, etc.). Toda la instalación se documenta conforme a los requisitos de clasificación de área dictaminada."}},
+       {"@type":"Question","name":"¿Cuánto cable pueden instalar por día en una planta industrial?",
+        "acceptedAnswer":{"@type":"Answer","text":"El rendimiento varía según el nivel de tensión y las condiciones del sitio. En BT con bandeja escalera preinstalada: 500–1,500 m/día por cuadrilla. En MT (cables XLPE unipolares 15kV): 200–500 m/día por terna, dependiendo de la ruta y el equipo de tendido disponible. En AT (cables >35kV): la velocidad de tendido se determina por la capacidad del carrete y la complejidad de las terminaciones, que son las operaciones más críticas en tiempo."}},
+       {"@type":"Question","name":"¿Incluyen el diseño de las bandejas portacables y el conduit?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. El diseño de canalización incluye: selección del tipo de bandeja (escalera, canal, ventilada, de piso), cálculo de carga por tramo, diseño de soportería (espaciado, tipo de anclaje, materiales según ambiente), segregación entre circuitos de potencia, control e instrumentación, y diseño de conduit en áreas donde las bandejas no son aplicables. Entregamos planos isométricos y de planta con dimensiones y especificación de material."}},
+       {"@type":"Question","name":"¿Realizan sellado cortafuego de ductos y mamparas?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. Instalamos selladores cortafuego en todos los pasos de cables a través de mamparas, losas y muros clasificados como barreras contra fuego, conforme a NOM-002-STPS y los requisitos de la aseguradora. Usamos sistemas 3M Firestop, Hilti CP y Rockwool, con certificado de instalación por punto de sellado entregado al cliente."}}
+     ]}
+  ]}
+  </script>
+</head>
+<body>
+<header aria-label="Barra de navegación">
+  <div class="container topbar">
+    <a href="index.html" class="brand__logo" aria-label="VMS Energy"><img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="eager" decoding="async" width="72" height="72"></a>
+    <nav aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
+      <ul id="menuList">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li class="nav-item--has-submenu">
+          <a href="nosotros.html" aria-haspopup="true">Nosotros</a>
+          <div class="submenu" role="menu" aria-label="Submenú de Nosotros">
+            <div class="submenu__group">
+              <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+              <ul class="submenu__list">
+                <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+                <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                <li><a href="proyectos-vms.html">Proyectos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+          <div class="submenu submenu--mega" role="menu" aria-label="Submenú de soluciones">
+            <div class="submenu__group">
+              <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li>
+                <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html#inicio">Generación Verde No Solar</a></li>
+                <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación Industrial</a></li>
+                <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones Eléctricas MT/AT</a></li>
+              </ul>
+            </div>
+            <div class="submenu__group">
+              <span class="submenu__title">Por Sector</span>
+              <ul class="submenu__list">
+                <li><a href="soluciones_mineria.html#inicio">Minería</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+          <div class="submenu" role="menu" aria-label="Submenú de Equipamiento">
+            <div class="submenu__group">
+              <span class="submenu__title">Equipamiento Crítico</span>
+              <ul class="submenu__list">
+                <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad Eléctrica (UPS/BESS)</a></li>
+                <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores Industriales</a></li>
+                <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Corrección de Factor de Potencia</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#servicios" aria-haspopup="true">Servicios</a>
+          <div class="submenu" role="menu" aria-label="Submenú de servicios">
+            <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detección y Supresión de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios Eléctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energía</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#334155;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block" aria-current="page">&#10003; Tendido y Cableado</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="procura.html#inicio">Procura</a></li>
+        <li><a href="contacto.html#inicio" class="btn btn--nav">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy &middot; Servicios Especializados</div>
+      <h1 id="heroTitle">Tendido y Cableado Eléctrico Industrial<br><em>BT · MT · AT — de la ruta al protocolo de pruebas</em></h1>
+      <p>Diseño de canalización, tendido en baja, media y alta tensión, terminaciones certificadas y pruebas eléctricas documentadas — todo bajo NOM-001-SEDE e IEC&nbsp;60502. El cable instalado correctamente, con el protocolo que lo prueba.</p>
+      <div class="hero-btns">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar propuesta técnica</a>
+        <a class="btn btn--ghost" href="#alcance">Ver alcance del servicio</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">⚡ NOM-001-SEDE-2012</span>
+        <span class="hero-stat">⚡ IEC 60502-1/2/4</span>
+        <span class="hero-stat">⚡ Megger · Hi-Pot · VLF</span>
+        <span class="hero-stat">⚡ BT / MT 35 kV / AT 138 kV</span>
+        <span class="hero-stat">⚡ Protocolo firmado en cada terna</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KPI STRIP ===== -->
+  <div class="kpi-strip" aria-label="Cifras clave">
+    <div class="container">
+      <div class="kpi"><div class="kpi__val">20+</div><div class="kpi__lbl">años en EPC eléctrico</div></div>
+      <div class="kpi"><div class="kpi__val">138&nbsp;kV</div><div class="kpi__lbl">nivel AT máximo ejecutado</div></div>
+      <div class="kpi"><div class="kpi__val">Offshore</div><div class="kpi__lbl">instalación en zona ATEX</div></div>
+      <div class="kpi"><div class="kpi__val">100%</div><div class="kpi__lbl">pruebas con protocolo firmado</div></div>
+      <div class="kpi"><div class="kpi__val">CFE · PEMEX</div><div class="kpi__lbl">clientes referencia</div></div>
+    </div>
+  </div>
+
+  <!-- ===== ALCANCE DEL SERVICIO ===== -->
+  <section class="section" id="alcance" aria-labelledby="alcanceTitle">
+    <div class="container">
+      <span class="sec-label">Alcance del servicio</span>
+      <h2 class="sec-h2" id="alcanceTitle">De la ingeniería de ruta a la entrega con protocolo</h2>
+      <p class="sec-lead">El cableado eléctrico industrial no termina cuando el cable llega a obra. Termina cuando el protocolo de pruebas está firmado y el sistema opera dentro de los parámetros de diseño.</p>
+      <div class="alcance-grid">
+        <div class="alc-card">
+          <span class="alc-card__icon">📐</span>
+          <h3 class="alc-card__title">Ingeniería de rutas y canalización</h3>
+          <p class="alc-card__desc">Diseño de trayectorias óptimas, selección del tipo de canalización (bandeja escalera, canal, ventilada, conduit EMT/IMC/rígido), segregación entre circuitos de potencia, control e instrumentación, cálculo de carga por tramo y soportería. Entrega de planos de planta e isométricos.</p>
+        </div>
+        <div class="alc-card">
+          <span class="alc-card__icon">🏗️</span>
+          <h3 class="alc-card__title">Fabricación e instalación de bandejas y conduit</h3>
+          <p class="alc-card__desc">Fabricación a medida, corte, curvado y conexionado de bandejas metálicas y conduit. Instalación de soportería con cálculo de espaciado conforme a NEC y NOM-001-SEDE. Tratamiento anticorrosivo en ambientes agresivos (offshore, petroquímica, alimentos). Continuidad de tierra en toda la red.</p>
+        </div>
+        <div class="alc-card">
+          <span class="alc-card__icon">🔌</span>
+          <h3 class="alc-card__title">Tendido de cable BT, MT y AT</h3>
+          <p class="alc-card__desc">Tendido respetando radios de curvatura mínimos por nivel de tensión (IEC 60502), tensión máxima de jalado en conductores grandes (kcmil), temperatura ambiente de instalación y separación entre circuitos. Uso de lubricante compatible con la cubierta del cable. Registro de longitudes tendidas por circuito.</p>
+        </div>
+        <div class="alc-card">
+          <span class="alc-card__icon">🔧</span>
+          <h3 class="alc-card__title">Terminaciones y empalmes certificados</h3>
+          <p class="alc-card__desc">Terminaciones termorretráctiles y de resina para BT (3M Scotchcast, TE Connectivity). Kits de terminación seca interior/exterior y empalmes para MT/AT (3M QT-III, Raychem HVT, Nexans). Instalación por personal certificado; cada terminación documentada con el kit usado, número de serie y responsable de instalación.</p>
+        </div>
+        <div class="alc-card">
+          <span class="alc-card__icon">🔬</span>
+          <h3 class="alc-card__title">Pruebas eléctricas con protocolo</h3>
+          <p class="alc-card__desc">Resistencia de aislamiento (megger 500V a 10kV según nivel de tensión), continuidad de conductor, resistencia de pantalla, prueba de rigidez dieléctrica Hi-Pot DC o VLF (0.1 Hz). Cada prueba entregada en protocolo con valores medidos, comparativa normativa y firma del responsable técnico.</p>
+        </div>
+        <div class="alc-card">
+          <span class="alc-card__icon">🔥</span>
+          <h3 class="alc-card__title">Sellado cortafuego de ductos</h3>
+          <p class="alc-card__desc">Instalación de selladores cortafuego en pasos de cables a través de mamparas, losas y muros clasificados conforme a NOM-002-STPS y requisitos de aseguradora. Sistemas 3M Firestop, Hilti CP y Rockwool. Certificado de instalación entregado por punto de sellado para respaldo ante auditorías.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POR NIVEL DE TENSIÓN ===== -->
+  <section class="section section--alt" id="tension" aria-labelledby="tensionTitle">
+    <div class="container">
+      <span class="sec-label">Especialización técnica</span>
+      <h2 class="sec-h2" id="tensionTitle">Cada nivel de tensión tiene su metodología</h2>
+      <p class="sec-lead">Las exigencias técnicas de una instalación de 480 V no son las mismas que las de 13.8 kV ni las de 115 kV. El proceso, el equipo de tendido y la certificación de terminaciones son distintos en cada caso.</p>
+      <div class="tension-tabs">
+        <div class="tension-tab">
+          <span class="tension-tab__badge">Baja tensión — hasta 1 kV</span>
+          <h3 class="tension-tab__title">Circuitos de distribución, motores y alumbrado</h3>
+          <ul class="tension-tab__list">
+            <li>Conductores THW-LS, THHW-LS, XHHW-2 en calibres AWG y kcmil</li>
+            <li>Conduit EMT, IMC y rígido con selladores en áreas clasificadas</li>
+            <li>Bandejas escalera y canal con segregación potencia / control</li>
+            <li>Megger 500 V — valor mínimo: 1 MΩ/km (IEC 60502-1)</li>
+            <li>Prueba de continuidad y resistencia de conductor</li>
+            <li>Etiquetado y marcaje conforme a NOM-001-SEDE Art. 310</li>
+          </ul>
+          <span class="tension-tab__norm">NOM-001-SEDE · NMX-J-010-ANCE · IEC 60502-1</span>
+        </div>
+        <div class="tension-tab">
+          <span class="tension-tab__badge">Media tensión — 1 a 35 kV</span>
+          <h3 class="tension-tab__title">Alimentadores principales, subestaciones y motores MT</h3>
+          <ul class="tension-tab__list">
+            <li>Cables XLPE y EPR unipolares con pantalla metálica (cinta de cobre o trenza)</li>
+            <li>Radio de curvatura: 12–15× diámetro exterior en tendido (IEC 60502-2)</li>
+            <li>Temperatura mínima de instalación: 0°C para cables sin precalentamiento</li>
+            <li>Terminaciones kits clase 15/25/35 kV (3M QT-III, Raychem HVT)</li>
+            <li>Megger 5 kV — mínimo 100 MΩ (antes y después de terminaciones)</li>
+            <li>Hi-Pot DC: 0.6 × Un × √2 durante 15 min, o VLF 0.1 Hz</li>
+          </ul>
+          <span class="tension-tab__norm">NMX-J-098-ANCE · IEC 60502-2 · IEEE 400.2</span>
+        </div>
+        <div class="tension-tab">
+          <span class="tension-tab__badge">Alta tensión — 35 a 138 kV</span>
+          <h3 class="tension-tab__title">Líneas de transmisión subterránea y entradas a subestación</h3>
+          <ul class="tension-tab__list">
+            <li>Cables XLPE unipolar con pantalla de cobre y cubierta HDPE anti-corrosión</li>
+            <li>Tendido con cabrestante y tensor hidráulico — registro de tensión de jalado</li>
+            <li>Terminaciones húmedas y secas certificadas por el fabricante del cable</li>
+            <li>Empalmes vulcanizados o prefabricados con mangas de alta tensión</li>
+            <li>Megger 10 kV — diagnóstico pre y post instalación</li>
+            <li>VLF 0.1 Hz + medición de pérdidas dieléctricas (tan δ) y descargas parciales (PD)</li>
+          </ul>
+          <span class="tension-tab__norm">IEC 60502-4 · IEC 60840 · IEEE 400 · CFE L0000-41</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO ===== -->
+  <section class="section" id="proceso" aria-labelledby="procesoTitle">
+    <div class="container">
+      <span class="sec-label">Metodología EPC</span>
+      <h2 class="sec-h2" id="procesoTitle">Cómo ejecutamos un proyecto de cableado</h2>
+      <p class="sec-lead">Cada proyecto sigue la misma secuencia de control — sin saltarse pasos — independientemente del tamaño del contrato.</p>
+      <div class="process-steps">
+        <div class="step">
+          <span class="step__badge">1</span>
+          <h3 class="step__title">Ingeniería de ruta</h3>
+          <p class="step__desc">Revisamos el unifilar eléctrico, visitamos el sitio, definimos trayectorias, seleccionamos el sistema de canalización y calculamos la cargabilidad de bandejas. Emitimos planos para revisión del cliente antes de iniciar obra.</p>
+        </div>
+        <div class="step">
+          <span class="step__badge">2</span>
+          <h3 class="step__title">Fabricación e instalación de canalización</h3>
+          <p class="step__desc">Fabricamos e instalamos bandejas, conduit y soportería conforme a los planos aprobados. Verificamos continuidad de tierra en todo el sistema de canalización antes del tendido de cable.</p>
+        </div>
+        <div class="step">
+          <span class="step__badge">3</span>
+          <h3 class="step__title">Tendido del cable</h3>
+          <p class="step__desc">Tendido respetando temperatura ambiente, radio de curvatura y tensión máxima de jalado. Registro de longitudes por circuito. Etiquetado provisional en ambos extremos para identificación antes de la terminación.</p>
+        </div>
+        <div class="step">
+          <span class="step__badge">4</span>
+          <h3 class="step__title">Terminaciones y empalmes</h3>
+          <p class="step__desc">Preparación y ejecución de terminaciones por personal certificado. Registro del kit utilizado, lote del fabricante y responsable de instalación. Inspección visual de cada terminación antes de la prueba eléctrica.</p>
+        </div>
+        <div class="step">
+          <span class="step__badge">5</span>
+          <h3 class="step__title">Pruebas eléctricas</h3>
+          <p class="step__desc">Megger, continuidad, Hi-Pot o VLF según el nivel de tensión. Cada prueba documentada en protocolo individual con el equipo utilizado (con certificado de calibración vigente), valores medidos, condiciones ambientales y firma del técnico responsable.</p>
+        </div>
+        <div class="step">
+          <span class="step__badge">6</span>
+          <h3 class="step__title">Entrega y As-Built</h3>
+          <p class="step__desc">Actualización de planos a condición As-Built, compilación del dossier de instalación (protocolos de prueba, registros de terminaciones, certificados de materiales) y presentación de resultados al cliente. El sistema está listo para comisionamiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRUEBAS ===== -->
+  <section class="section section--alt" id="pruebas" aria-labelledby="pruebasTitle">
+    <div class="container">
+      <span class="sec-label">Pruebas eléctricas</span>
+      <h2 class="sec-h2" id="pruebasTitle">Sin protocolo firmado, el cable no se entrega</h2>
+      <p class="sec-lead">Cada circuito instalado se prueba antes de la entrega. Los valores medidos se comparan contra los límites normativos y del fabricante. Las pruebas son el respaldo técnico del cliente ante cualquier falla futura.</p>
+      <div class="prueba-grid">
+        <div class="prueba-card">
+          <p class="prueba-card__num">Megger · IEC 60502</p>
+          <h3 class="prueba-card__title">Resistencia de aislamiento</h3>
+          <p class="prueba-card__desc">Medición con telurómetro digital a 500 V (BT), 1–5 kV (MT) o 10 kV (AT). Detecta humedad, contaminación o daño mecánico en el aislamiento. Se realiza antes y después de las terminaciones para separar el estado del cable del estado de la terminación.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__num">Hi-Pot DC · IEEE 400.2</p>
+          <h3 class="prueba-card__title">Rigidez dieléctrica DC</h3>
+          <p class="prueba-card__desc">Aplicación de tensión DC a 0.6 × Un × √2 durante 15 minutos con registro de la corriente de fuga. Una corriente estable o decreciente indica aislamiento sano. Se aplica a cables MT y AT nuevos o rehabilitados. No daña el XLPE a diferencia de la prueba Hi-Pot AC de potencia.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__num">VLF · IEEE 400.2</p>
+          <h3 class="prueba-card__title">Prueba de Very Low Frequency (0.1 Hz)</h3>
+          <p class="prueba-card__desc">Prueba AC a 0.1 Hz como alternativa al Hi-Pot DC en cables de AT. Evita la acumulación de carga espacial en XLPE que puede originar el efecto de "memoria" del Hi-Pot DC. Se complementa con medición de pérdidas dieléctricas (tan δ) para diagnosticar el estado del aislamiento.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__num">PD · IEC 60885-3</p>
+          <h3 class="prueba-card__title">Detección de descargas parciales</h3>
+          <p class="prueba-card__desc">Medición de descargas parciales (partial discharge) en cables AT y en terminaciones de MT/AT. Detecta defectos de fabricación, daño mecánico en la pantalla o instalación incorrecta de terminaciones antes de que provoquen una falla catastrófica. Recomendada en cables de AT nuevos y en rehabilitaciones.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__num">Micro-ohm · IEC 60228</p>
+          <h3 class="prueba-card__title">Resistencia de conductor y pantalla</h3>
+          <p class="prueba-card__desc">Medición de resistencia DC del conductor en micro-ohmios para verificar la sección transversal real y la ausencia de empalmes ocultos o daño en el conductor. La continuidad de la pantalla metálica se verifica para garantizar el retorno de corrientes de falla a tierra.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__num">IR · NETA ATS</p>
+          <h3 class="prueba-card__title">Termografía post-puesta en servicio</h3>
+          <p class="prueba-card__desc">Inspección termográfica infrarroja de terminaciones y conectores en los primeros 30 días de operación bajo carga. Un punto caliente en una terminación indica apriete insuficiente o defecto en el kit antes de que cause falla. Entregamos el reporte termográfico como parte del dossier de instalación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section class="section" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Proyectos de referencia</span>
+      <h2 class="sec-h2" id="refTitle">Instalaciones de cableado ejecutadas por VMS Energy</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">Plataforma AKAL-B — Cotemar / Pemex</p>
+          <p class="ref-card__lugar">📍 Campeche, offshore</p>
+          <p class="ref-card__desc">Tendido y terminaciones de cable MT 4,160 V en zona clasificada ATEX — Zona 1 y Zona 2. Instalación de conduit rígido con selladores cortafuego en pasos de mamparas. Pruebas megger y Hi-Pot documentadas conforme a especificación Pemex.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Subestación 115 kV — CFE</p>
+          <p class="ref-card__lugar">📍 Colima</p>
+          <p class="ref-card__desc">Tendido de cables AT 115 kV XLPE con armadura de aluminio para alimentación de subestación CFE. Terminaciones secas al aire con kit de alta tensión. Pruebas VLF 0.1 Hz con medición de pérdidas dieléctricas y reporte de descargas parciales conforme a IEC 60840.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Planta automotriz — Tier 1</p>
+          <p class="ref-card__lugar">📍 Guadalajara, Jalisco</p>
+          <p class="ref-card__desc">Instalación de canalización y tendido de cable MT 13.8 kV y BT 480 V para ampliación de línea de ensamble. Más de 40 km de cable instalados en bandeja escalera y conduit IMC. Protocolos de prueba entregados por circuito antes de la puesta en servicio de cada tablero.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio azucarero — Zafra</p>
+          <p class="ref-card__lugar">📍 Oaxaca</p>
+          <p class="ref-card__desc">Rehabilitación de cableado MT 4.16 kV y BT 480 V en ventana de reparación entre zafras (mayo–octubre). Sustitución de cables con daño por humedad y vibración en circuitos de molinos y difusores. Pruebas Hi-Pot DC antes de la puesta en marcha de la siguiente temporada.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Parque solar industrial — 3.2 MW</p>
+          <p class="ref-card__lugar">📍 Sonora</p>
+          <p class="ref-card__desc">Tendido de cable DC fotovoltaico y cable AC MT para parque solar industrial. Instalación de bandeja ventilada a la intemperie con tratamiento anticorrosivo y cable resistente a UV. Pruebas de aislamiento en campo para cada string DC antes de la conexión a los inversores.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Hospital de especialidades — IMSS</p>
+          <p class="ref-card__lugar">📍 Jalisco</p>
+          <p class="ref-card__desc">Cableado eléctrico en circuitos críticos de hospital con redundancia de alimentación. Sellado cortafuego en todos los pasos de mamparas clasificadas conforme a NFPA 101 y NOM-002-STPS. Certificado de instalación por punto entregado al responsable de obra y a la aseguradora.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENTREGABLES ===== -->
+  <section class="section section--alt" id="entregables" aria-labelledby="entTitle">
+    <div class="container">
+      <span class="sec-label">Entregables</span>
+      <h2 class="sec-h2" id="entTitle">El dossier de cableado que respalda la instalación</h2>
+      <p class="sec-lead">Cada proyecto se cierra con un paquete de documentación que permite al cliente auditar, mantener y ampliar la instalación en el futuro sin depender de la memoria del instalador.</p>
+      <div class="entregables-grid">
+        <div class="ent-card"><div class="ent-card__icon">📐</div><p class="ent-card__title">Planos de canalización As-Built</p></div>
+        <div class="ent-card"><div class="ent-card__icon">📋</div><p class="ent-card__title">Protocolo de pruebas por circuito (firmado)</p></div>
+        <div class="ent-card"><div class="ent-card__icon">🔬</div><p class="ent-card__title">Certificados de calibración de equipos de prueba</p></div>
+        <div class="ent-card"><div class="ent-card__icon">🔧</div><p class="ent-card__title">Registro de terminaciones (kit, lote, responsable)</p></div>
+        <div class="ent-card"><div class="ent-card__icon">📄</div><p class="ent-card__title">Certificados de materiales (MTR del cable)</p></div>
+        <div class="ent-card"><div class="ent-card__icon">🔥</div><p class="ent-card__title">Certificados de sellado cortafuego por punto</p></div>
+        <div class="ent-card"><div class="ent-card__icon">🌡️</div><p class="ent-card__title">Reporte de termografía post-puesta en servicio</p></div>
+        <div class="ent-card"><div class="ent-card__icon">📊</div><p class="ent-card__title">Resumen ejecutivo de instalación para dirección</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Preguntas frecuentes</span>
+      <h2 class="sec-h2" id="faqTitle">Dudas frecuentes sobre tendido y cableado eléctrico</h2>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>¿Cuál es la diferencia entre el suministro de cable y el servicio de cableado?</summary>
+          <div class="faq-body">El <strong>suministro de cable</strong> es la procura del material conforme a especificación técnica (conductor, aislamiento, cubierta). El <strong>servicio de cableado EPC</strong> incluye adicionalmente el diseño de rutas y canalización, fabricación e instalación de bandejas y conduit, tendido respetando radios de curvatura y temperatura de instalación, terminaciones certificadas y pruebas eléctricas documentadas. VMS Energy presta ambos servicios de forma integrada, lo que elimina la interfaz entre el proveedor de material y el instalador.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué normas aplican al cableado eléctrico industrial en México?</summary>
+          <div class="faq-body">Las principales son: <strong>NOM-001-SEDE-2012</strong> (instalaciones eléctricas en general), <strong>NMX-J-010-ANCE</strong> (conductores BT), <strong>NMX-J-098-ANCE</strong> (cables MT), <strong>IEC 60502-1/2/4</strong> (cables de energía hasta 138 kV). Para proyectos CFE aplican adicionalmente la especificación <strong>CFE L0000-41</strong>. En instalaciones con riesgo de incendio aplica <strong>NOM-002-STPS</strong> para el sellado cortafuego de ductos.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué pruebas eléctricas realizan después de instalar el cable?</summary>
+          <div class="faq-body">Las pruebas estándar incluyen: resistencia de aislamiento (<strong>megger</strong> a 500 V para BT, 1–5 kV para MT, 10 kV para AT), continuidad del conductor y verificación de resistencia (micro-ohm), continuidad de pantalla o blindaje, y prueba de rigidez dieléctrica <strong>Hi-Pot DC</strong> (0.6 × Un × √2 durante 15 min para MT/AT) o <strong>VLF</strong> a 0.1 Hz para cables de AT. Cada prueba se entrega en protocolo firmado con valores medidos y comparativa normativa.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Pueden instalar cableado en zonas clasificadas ATEX/NEC?</summary>
+          <div class="faq-body">Sí. En áreas clasificadas instalamos conduit rígido con <strong>selladores cortafuego</strong> (NEC Art. 501), glands certificados Ex-e o Ex-d para entradas a tableros certificados, y cables con cubierta adecuada al ambiente (resistente a hidrocarburos, FR-XLPE). Toda la instalación se documenta conforme a los requisitos de la clasificación de área dictaminada.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Incluyen el diseño de las bandejas portacables?</summary>
+          <div class="faq-body">Sí. El diseño de canalización incluye: selección del tipo de bandeja (<strong>escalera, canal, ventilada</strong>), cálculo de carga por tramo, diseño de soportería con espaciado y tipo de anclaje según ambiente, y segregación entre circuitos de potencia, control e instrumentación. Entregamos planos de planta e isométricos aprobados antes de iniciar la instalación.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Cuál es el radio de curvatura mínimo para cable de media tensión?</summary>
+          <div class="faq-body">Según <strong>IEC 60502-2</strong>, el radio mínimo para cables MT unipolares con pantalla metálica es generalmente de <strong>12 a 15 veces el diámetro exterior</strong> del cable durante la instalación en frío, y 8 a 10 veces en servicio estático. Siempre verificamos el valor específico del fabricante del cable suministrado antes del tendido y lo registramos en el plan de instalación.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Realizan el sellado cortafuego de ductos en mamparas y losas?</summary>
+          <div class="faq-body">Sí. Instalamos selladores cortafuego en todos los pasos de cables a través de mamparas, losas y muros clasificados conforme a <strong>NOM-002-STPS</strong> y los requisitos de la aseguradora. Usamos sistemas <strong>3M Firestop, Hilti CP y Rockwool</strong>. Entregamos certificado de instalación por punto de sellado para respaldo ante auditorías de seguridad y de aseguradora.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- cross-link: VMShop cable supply -->
+  <section class="section section--alt" aria-label="Suministro de cable en VMShop">
+    <div class="container">
+      <div class="vmshop-callout">
+        <div class="vmshop-callout__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke="#fff" stroke-width="2" fill="none"/><path d="M16 10a4 4 0 0 1-8 0" stroke="#fff" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="vmshop-callout__body" style="flex:1">
+          <span class="vmshop-callout__tag">VMShop &mdash; Suministro de cable</span>
+          <p class="vmshop-callout__title">Solicita cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC</p>
+          <p class="vmshop-callout__sub">Selecciona la l&iacute;nea que necesitas y recibe cotizaci&oacute;n con validaci&oacute;n t&eacute;cnica en menos de 24&nbsp;h.</p>
+          <div class="vmshop-cable-grid" style="margin-top:14px">
+            <a class="vmshop-cable-chip" href="lp-cable-de-potencia-kei.html">
+              <span class="vmshop-cable-chip__dot"></span>Cable de potencia MT/AT
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-alta-tension.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables alta tensi&oacute;n
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-extra-alta-tension.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables extra alta tensi&oacute;n
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-fotovoltaicos.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables fotovoltaicos
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-especiales.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables especiales / ESP
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>El cable instalado correctamente — con el protocolo que lo demuestra</h2>
+      <p>Solicite una propuesta técnica para su proyecto de cableado. Indicamos niveles de tensión, longitudes estimadas, condiciones del sitio y requerimiento de pruebas para responder con alcance y precio en 5 días hábiles.</p>
+      <div class="cta-band-btns">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar propuesta técnica</a>
+        <a class="btn btn--ghost" href="lp-estudios-electricos-industriales.html">Ver estudios eléctricos</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot" id="footer" aria-label="Pie de página">
+  <div class="container">
+    <div>
+      <h4>VMS Energy</h4>
+      <p style="font-size:13px;color:#94a3b8;line-height:1.6;margin:0 0 12px">Ingeniería EPC eléctrica, suministro técnico y servicios especializados para la industria en México.</p>
+      <div style="display:flex;gap:8px">
+        <a href="https://www.linkedin.com/company/vms-energy/" target="_blank" rel="noopener" aria-label="LinkedIn VMS Energy" style="width:32px;height:32px;border-radius:50%;background:#1e3a5f;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:14px;text-decoration:none">in</a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+        <li><a href="lp-deteccion-control-supresion-fuego.html">Detección y Supresión de Fuego</a></li>
+        <li><a href="lp-estudios-electricos-industriales.html">Estudios Eléctricos</a></li>
+        <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+        <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+        <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energía</a></li>
+        <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Cable eléctrico</h4>
+      <ul>
+        <li><a href="lp-cable-de-potencia-kei.html">Cable de Potencia MT/AT</a></li>
+        <li><a href="lp-cables-alta-tension.html">Cables Alta Tensión</a></li>
+        <li><a href="lp-cables-extra-alta-tension.html">Cables Extra Alta Tensión</a></li>
+        <li><a href="lp-cables-fotovoltaicos.html">Cables Fotovoltaicos</a></li>
+        <li><a href="lp-cables-especiales.html">Cables Especiales</a></li>
+        <li><a href="blog-seleccion-cable-electrico-industrial.html">Blog: Selección de cable</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="certificaciones.html">Certificaciones ISO</a></li>
+        <li><a href="proyectos-vms.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="aviso-privacidad.html">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html">Código de Ética</a></li>
+        <li><a href="politica-antisoborno.html">Política Antisoborno</a></li>
+      </ul>
+      <p style="font-size:11px;color:#64748b;margin-top:16px">© 2025 VMS Energy S.A. de C.V.<br>Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const list   = document.getElementById('menuList');
+  if(toggle && list){
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if(window.innerWidth < 900){ e.preventDefault(); a.closest('.nav-item--has-submenu').classList.toggle('is-open'); }
+      });
+    });
+  }
+  document.querySelectorAll('.faq').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if(d.open) document.querySelectorAll('.faq[open]').forEach(o => { if(o !== d) o.removeAttribute('open'); });
+    });
+  });
+</script>
+</body>
+</html>

@@ -170,7 +170,6 @@
         <li><a href="informacion.html">Información</a></li>
         <li><a href="comunicados.html">Comunicados</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="Index.html">Inicio SAS</a></li>
         <li class="header-social">
           <a aria-label="Facebook" href="https://www.facebook.com/gchCertificationsHouse" rel="noopener noreferrer" target="_blank"><img alt="" class="social-logo" src="https://cdn.simpleicons.org/facebook/0F4C81"/></a>
           <a aria-label="Instagram" href="https://www.instagram.com/generalcertificationshouse/" rel="noopener noreferrer" target="_blank"><img alt="" class="social-logo" src="https://cdn.simpleicons.org/instagram/0F4C81"/></a>
@@ -474,4 +473,34 @@
       nombre: (fd.get('nombre')||'').toString().trim(),
       correo: (fd.get('correo')||'').toString().trim(),
       telefono: (fd.get('telefono')||'').toString().trim(),
-      interes: (fd.get('interes')||'
+      interes: (fd.get('interes')||'').toString().trim(),
+      mensaje: (fd.get('mensaje')||'').toString().trim(),
+      origen: location.pathname,
+      source: 'sticky_widget'
+    };
+    if(!payload.nombre || !payload.correo || !payload.interes){
+      msg.textContent='Completa nombre, correo e interés.';
+      return;
+    }
+    msg.textContent='Enviando...';
+    try{
+      const endpoint = (document.body && document.body.dataset && document.body.dataset.leadEndpoint) ? document.body.dataset.leadEndpoint : '/api/leads';
+      const res = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      msg.textContent='Gracias. Te contactaremos a la brevedad.';
+      quickForm.reset();
+      setTimeout(function(){setOpen(false);},900);
+    }catch(_err){
+      msg.textContent='No se pudo enviar aquí. Te llevamos al formulario completo...';
+      setTimeout(function(){ location.href='contacto.html#form'; },700);
+    }
+  });
+})();
+</script>
+<!-- ── WhatsApp flotante ── -->
+<a aria-label="Escríbenos por WhatsApp" class="wa-float" href="https://wa.me/523337837461?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios%20de%20certificaci%C3%B3n." rel="noopener noreferrer" target="_blank">
+  <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.105.546 4.085 1.5 5.818L0 24l6.335-1.477A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.728.869.884-3.638-.233-.374A9.817 9.817 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+  <span>¿Necesitas informes?</span>
+</a>
+</body>
+</html>

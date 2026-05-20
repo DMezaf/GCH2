@@ -142,8 +142,8 @@
     .hero-slide img{
       width:100%;
       height:100%;
-      object-fit:contain;
-      object-position:center;
+      object-fit:cover;
+      object-position:center top;
       display:block;
     }
     .hero-overlay{
@@ -159,10 +159,27 @@
       align-items:center;
     }
     .hero-content{
-      max-width:680px;
+      max-width:640px;
       padding:24px 20px;
+      padding-left:clamp(20px,5vw,60px);
+      position:relative;
+    }
+    /* Fijar posición del bloque de texto igual en todos los slides */
+    .hero-inner .container{
+      display:flex;
+      align-items:center;
+      height:100%;
     }
     .hero h1{margin:0 0 12px;font-size:54px;line-height:1.05}
+    .hero-kicker{
+      display:block;
+      font-size:.78rem;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:#b7d6ff;
+      margin:0 0 10px;
+    }
     .hero p{font-size:1.24rem;line-height:1.45;margin:0}
     .btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:14px 18px;font-weight:800;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease,background .16s ease,color .16s ease,border-color .16s ease;min-height:44px;line-height:1.2;text-align:center}
     .btn:hover{transform:translateY(-1px)}
@@ -1046,7 +1063,9 @@ textarea:focus-visible{
   .social-links a,.footer-social a,.header-social a{min-height:44px;min-width:44px}
 }
 
-</style><style>
+
+    .certify-ico-svg{width:88px;height:88px;display:block;margin:0 auto 12px;filter:drop-shadow(0 4px 10px rgba(23,44,81,.25))}
+  </style><style>
 /* === FAQ search & anchors === */
 .faq-acc .tools{ align-items:center }
 .faq-search{ margin-left:auto; display:flex; gap:10px; align-items:center }
@@ -1095,7 +1114,6 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <li><a href="informacion.html">Información</a></li>
 <li><a href="comunicados.html">Comunicados</a></li>
 <li><a href="contacto.html">Contacto</a></li>
-<li><a href="Index.html">Inicio SAS</a></li>
 <li class="header-social">
 <a aria-label="Facebook" href="https://www.facebook.com/gchCertificationsHouse" rel="noopener noreferrer" target="_blank"><img alt="" class="social-logo" src="https://cdn.simpleicons.org/facebook/0F4C81"/></a>
 <a aria-label="Instagram" href="https://www.instagram.com/generalcertificationshouse/" rel="noopener noreferrer" target="_blank"><img alt="" class="social-logo" src="https://cdn.simpleicons.org/instagram/0F4C81"/></a>
@@ -1114,6 +1132,7 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <div class="hero-inner">
 <div class="container">
 <div class="hero-content">
+<p class="hero-kicker">General Certifications House</p>
 <h1>Certificaciones ISO, auditorías y cursos para tu empresa</h1>
 <p>Impulsamos el cumplimiento de estándares nacionales e internacionales mediante certificaciones y capacitaciones reconocidas por organismos como la GFSI.</p>
 <div class="cta-row">
@@ -1130,7 +1149,8 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <div class="hero-inner">
 <div class="container">
 <div class="hero-content">
-<h1>Certificaciones internacionales para elevar tu competitividad</h1>
+<p class="hero-kicker">Certificaciones Internacionales</p>
+<h2>Certificaciones internacionales para elevar tu competitividad</h2>
 <p>Como Organismo de Certificación, evaluamos con objetividad e imparcialidad bajo estándares como ISO 9001, ISO 14001, ISO 45001, ISO 22000 y Primus GFS, fortaleciendo la confianza de nuestros clientes. Certificar no es asesorar: es validar objetivamente que tu sistema cumple y genera resultados.</p>
 <div class="cta-row">
 <a class="btn btn-primary" href="certificaciones.html">Ver certificaciones</a>
@@ -1146,7 +1166,8 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <div class="hero-inner">
 <div class="container">
 <div class="hero-content">
-<h1>Certificaciones de Cumplimiento para reducir riesgos operativos</h1>
+<p class="hero-kicker">Certificaciones de Cumplimiento</p>
+<h2>Certificaciones de Cumplimiento para reducir riesgos operativos</h2>
 <p>Evaluamos HARCP, HACCP, GMP/BPM, BPA y Supplier Development Program para fortalecer inocuidad y conformidad normativa.</p>
 <div class="cta-row">
 <a class="btn btn-primary" href="auditorias.html">Explorar auditorias</a>
@@ -1162,7 +1183,8 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <div class="hero-inner">
 <div class="container">
 <div class="hero-content">
-<h1>Capacitación especializada para fortalecer las competencias de tu equipo</h1>
+<p class="hero-kicker">Capacitación Especializada</p>
+<h2>Capacitación especializada para fortalecer las competencias de tu equipo</h2>
 <p>Desde curso auditor interno ISO hasta formación en inocuidad, ambiental y herramientas de calidad orientadas a resultados.</p>
 <div class="cta-row">
 <a class="btn btn-primary" href="cursos.html">Ver cursos</a>
@@ -1178,7 +1200,8 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <div class="hero-inner">
 <div class="container">
 <div class="hero-content">
-<h1>Servicios industriales para cumplimiento normativo y continuidad operativa</h1>
+<p class="hero-kicker">Servicios Industriales</p>
+<h2>Servicios industriales para cumplimiento normativo y continuidad operativa</h2>
 <p>Inspecciones, integridad mecánica, ensayos no destructivos y certificación técnica para proteger tus activos críticos.</p>
 <div class="cta-row">
 <a class="btn btn-primary" href="servicios.html">Ver servicios industriales</a>
@@ -1194,7 +1217,7 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <button aria-label="Siguiente slide" class="hero-nav" id="heroNext" type="button">›</button>
 </div>
 </section>
-<section id="servicios">
+<section id="servicios" style="scroll-margin-top:80px">
 <div class="container">
 <h2 class="section-title">Catálogo de servicios</h2>
 <p class="hint">Selecciona una opción y recibe un plan en 48 h.</p>
@@ -1276,19 +1299,51 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
 <h2 class="certify-title">CERTIFÍCATE CON NOSOTROS</h2>
 <div class="certify-grid">
 <article class="certify-card">
-<img alt="Servicio eficaz" class="certify-ico-img" loading="lazy" src="assets/img/servicio-eficaz.png"/>
+<svg aria-hidden="true" class="certify-ico-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" fill="rgba(255,255,255,.18)" r="38" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+  <polyline fill="none" points="24,42 34,52 56,30" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <circle cx="58" cy="24" fill="#fff" r="7"/>
+  <polyline fill="none" points="55,24 57.5,26.5 62,21" stroke="rgba(255,154,122,1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"/>
+</svg>
 <p class="certify-text">SERVICIO<br/>EFICAZ</p>
 </article>
 <article class="certify-card">
-<img alt="Reconocimiento oficial" class="certify-ico-img" loading="lazy" src="assets/img/Reconocimiento_oficial.png"/>
+<svg aria-hidden="true" class="certify-ico-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" fill="rgba(255,255,255,.18)" r="38" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+  <!-- Medalla -->
+  <circle cx="40" cy="32" fill="none" r="15" stroke="#fff" stroke-width="4"/>
+  <path d="M31,45 L28,62 L40,56 L52,62 L49,45" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+  <!-- Estrella interior -->
+  <polygon fill="#fff" points="40,22 41.8,27.5 47.5,27.5 42.9,30.9 44.7,36.4 40,33 35.3,36.4 37.1,30.9 32.5,27.5 38.2,27.5" opacity=".9"/>
+</svg>
 <p class="certify-text">RECONOCIMIENTO<br/>OFICIAL</p>
 </article>
 <article class="certify-card">
-<img alt="Satisfacción garantizada" class="certify-ico-img" loading="lazy" src="assets/img/Satisfaccion_garantizada.png"/>
-<p class="certify-text">SATISFACCION<br/>GARANTIZADA</p>
+<svg aria-hidden="true" class="certify-ico-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" fill="rgba(255,255,255,.18)" r="38" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+  <!-- Cara sonriente -->
+  <circle cx="40" cy="38" fill="none" r="18" stroke="#fff" stroke-width="3.5"/>
+  <circle cx="33" cy="33" fill="#fff" r="2.8"/>
+  <circle cx="47" cy="33" fill="#fff" r="2.8"/>
+  <path d="M31,42 Q40,52 49,42" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3.5"/>
+  <!-- Pulgar arriba pequeño -->
+  <path d="M20,54 L14,54 L14,62 L20,62 Z M20,54 L23,50 Q25,46 28,48 L28,54 Z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2" opacity=".7"/>
+</svg>
+<p class="certify-text">SATISFACCIÓN<br/>GARANTIZADA</p>
 </article>
 <article class="certify-card">
-<img alt="Personal altamente calificado" class="certify-ico-img" loading="lazy" src="assets/img/personal_capacitado.png"/>
+<svg aria-hidden="true" class="certify-ico-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" fill="rgba(255,255,255,.18)" r="38" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+  <!-- Persona -->
+  <circle cx="40" cy="28" fill="#fff" r="9"/>
+  <!-- Torso -->
+  <path d="M24,60 Q24,46 40,46 Q56,46 56,60" fill="#fff" opacity=".9"/>
+  <!-- Gorro de graduación -->
+  <rect fill="none" height="4" rx="1" stroke="#fff" stroke-width="2.5" width="20" x="30" y="17"/>
+  <polygon fill="#fff" points="40,13 52,18 40,22 28,18" opacity=".9"/>
+  <line stroke="#fff" stroke-linecap="round" stroke-width="2.5" x1="52" x2="55" y1="18" y2="24"/>
+  <circle cx="55" cy="25" fill="#fff" r="2"/>
+</svg>
 <p class="certify-text">PERSONAL<br/>ALTAMENTE CALIFICADO</p>
 </article>
 </div>
@@ -1792,6 +1847,22 @@ mark{ background: #fff1a8; padding:0 2px; border-radius:4px }
       }
     });
   });
+
+  // ── Ocultar sticky CTA al llegar al footer ──
+  (function(){
+    const stickyCta = document.getElementById('specialistToggle');
+    const footer = document.querySelector('footer');
+    if (!stickyCta || !footer || !window.IntersectionObserver) return;
+    const obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        stickyCta.style.opacity       = entry.isIntersecting ? '0' : '1';
+        stickyCta.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+        stickyCta.style.transform     = entry.isIntersecting ? 'translateY(12px)' : '';
+        stickyCta.style.transition    = 'opacity .25s ease, transform .25s ease';
+      });
+    }, {threshold: 0.05});
+    obs.observe(footer);
+  })();
 
 </script>
 <script>
@@ -2497,4 +2568,30 @@ function updateDurationBadge(courseName){
     touchStartX = e.touches[0].clientX;
     touchEndX = touchStartX;
     if (timer) clearInterval(timer);
-  }, {                                                                                
+  }, {passive: true});
+  track.addEventListener('touchmove', (e) => {
+    if (!e.touches || !e.touches.length) return;
+    touchEndX = e.touches[0].clientX;
+  }, {passive: true});
+  track.addEventListener('touchend', () => {
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > swipeThreshold) {
+      goTo(index + (diff > 0 ? 1 : -1), true);
+    } else {
+      restart();
+    }
+  });
+
+  buildDots();
+  goTo(0, false);
+  restart();
+})();
+</script>
+
+<!-- ── WhatsApp flotante ── -->
+<a aria-label="Escríbenos por WhatsApp" class="wa-float" href="https://wa.me/523337837461?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios%20de%20certificaci%C3%B3n." rel="noopener noreferrer" target="_blank">
+  <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.105.546 4.085 1.5 5.818L0 24l6.335-1.477A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.728.869.884-3.638-.233-.374A9.817 9.817 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+  <span>¿Necesitas informes?</span>
+</a>
+</body>
+</html>

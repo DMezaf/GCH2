@@ -211,20 +211,20 @@ footer li::before{
   width:260px;
   max-width:100%;
   height:90px;
-  border:1px dashed rgba(225,234,255,.45);
+  border:none;
   border-radius:12px;
   display:block;
   margin:0 0 12px;
-  background:rgba(255,255,255,.03);
-  object-fit:cover;
-  object-position:center;
+  background:transparent;
+  object-fit:contain;
+  object-position:left center;
   padding:0;
 }
 .footer-side-ph{
   width:100%;
   max-width:260px;
   height:130px;
-  border:1px dashed rgba(225,234,255,.45);
+  border:none;
   border-radius:12px;
   display:block;
   object-fit:contain;
@@ -260,3 +260,35 @@ footer li::before{
 
 
 
+
+/* ── WhatsApp flotante ── */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 20px 12px 14px;
+  font-size: .9rem;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(0,0,0,.22);
+  transition: background .2s, transform .2s, box-shadow .2s;
+  font-family: inherit;
+}
+.wa-float:hover {
+  background: #1ebe5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.28);
+  color: #fff;
+}
+.wa-float svg { flex-shrink: 0; }
+@media(max-width:520px){
+  .wa-float span { display: none; }
+  .wa-float { padding: 13px; border-radius: 50%; }
+}
